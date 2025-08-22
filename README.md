@@ -1,4 +1,4 @@
-# My Secure Password Manager 🔐  
+# My Secure Password Manager 
 
 
 This library provides a secure, password-based key-value storage solution for managing sensitive data like credentials. The `Keychain` class uses AES-GCM encryption to protect stored data, allowing for safe storage, retrieval, and serialization of encrypted information.
@@ -9,11 +9,11 @@ This library provides a secure, password-based key-value storage solution for ma
 ![Built by Natasha](https://img.shields.io/badge/Built%20By-Natasha-blue)
 
 
-## Introduction 💡
+## Brief Introduction 
 
 This project is a simple password manager I built using AES-GCM encryption. It allows users to safely store and retrieve credentials like website passwords and API keys, while ensuring that only those with the correct master password can unlock the data.
 
-## Key Features 🔑
+## Key Features 
 
 - AES-GCM encryption to protect passwords
 
@@ -25,7 +25,7 @@ This project is a simple password manager I built using AES-GCM encryption. It a
 
 ## How It Works ⚙️
 
-### Key Derivation 🔑
+### Key Derivation 
 
 To securely derive an encryption key from the user-provided password, the library uses PBKDF2 (Password-Based Key Derivation Function 2). This key derivation process includes:
 
@@ -35,7 +35,7 @@ To securely derive an encryption key from the user-provided password, the librar
 
 This process results in a master key that is used to encrypt and decrypt data within the keychain.
 
-### Data Encryption and Decryption 🔐
+### Data Encryption and Decryption 
 
 The `Keychain` class encrypts and decrypts the key-value store (`kvs`) using AES-GCM, a modern encryption algorithm suitable for secure data storage. The encryption process includes:
 
@@ -45,7 +45,7 @@ The `Keychain` class encrypts and decrypts the key-value store (`kvs`) using AES
 
 These steps ensure that data remains secure and can only be accessed by users with the correct password.
 
-### Data Dump and Load 🗃️
+### Data Dump and Load 
 
 To support backup and restoration, the library offers methods to export (`dump`) and import (`load`) encrypted key-value pairs. Each dump includes:
 
@@ -55,7 +55,7 @@ To support backup and restoration, the library offers methods to export (`dump`)
 
 Loading data requires the correct password to derive the master key, allowing for secure decryption of the key-value pairs.
 
-## Installation 🛠️
+## Installation 
 
 To use this library, clone the repository and install the required dependencies:
 
@@ -67,7 +67,7 @@ npm install
 
 ```
 
-## Usage 🚀
+## Usage 
 
 Example usage of the Keychain class:
 ```javascript
@@ -91,7 +91,7 @@ const loadedKeychain = await Keychain.load('your-password', contents, checksum);
 
 ```
 
-## Testing 🧪
+## Testing 
 
 To test the project, I used Mocha. If you don’t already have it:
 
@@ -104,7 +104,7 @@ To test:
 mocha
 ```
 
-## Running the Server🖥️
+## Running the Server
 To run the server, you need to have Node.js installed. Then, you can run the server.
 ```bash
 node server.js
@@ -211,6 +211,6 @@ Other users’ passwords stay private.
 Scales easily by adding new attributes or revoking them.
 
 
-## Author ✍️
+## Author 
 Developed by Natasha Njoroge  
 
